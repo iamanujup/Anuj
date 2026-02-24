@@ -68,10 +68,6 @@ UB_API_HASH = "03fa0e0d98aacd08334e70ed7b927391"
 # List of session strings from environment variables
 USERBOT_SESSIONS = [
     os.environ.get("ses1"),
-    os.environ.get("ses2"),
-    os.environ.get("ses3"),
-    os.environ.get("ses4"),
-    os.environ.get("ses5"),
 ]
 # Filter out empty sessions (in case you only set 2 or 3)
 USERBOT_SESSIONS = [s for s in USERBOT_SESSIONS if s]
