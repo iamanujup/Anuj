@@ -2280,7 +2280,6 @@ async def start_quiz_in_group(bot, chat_id: int, quiz_id: str, starter_id: int =
         "chat_id": chat_id,
         "questions": questions,
         "current_q": 0,
-        "time_per_question_sec": int(q_doc.get("time_per_question_sec", 30)),
         "participants": {},
         "message_id": None,
         "starter_id": starter_id,
