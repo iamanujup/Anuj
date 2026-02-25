@@ -2390,7 +2390,7 @@ async def group_send_question(bot, session_key):
             await asyncio.sleep(session["time_per_question_sec"] + 2)
             fresh_session = await read_session_file(path, lock)
             if fresh_session and fresh_session["current_q"] == qidx:
-                await group_reveal_and_advance(bot, session_key, qidx, timed_out=True)
+                await group_reveal_and_advance(bot, session_key, qidx, timed_out=False)
         except asyncio.CancelledError:
             pass
     running_group_tasks[session_key] = asyncio.create_task(per_question_timeout())
